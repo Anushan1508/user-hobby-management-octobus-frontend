@@ -1,0 +1,126 @@
+
+
+.ant-table-thead > tr > th {
+  color: red;
+  background: black;
+}
+
+
+@table-header-background-color: #104393;
+
+
+
+.ant-table-tbody > tr > td {
+  color: black;
+
+  font-size: 12px;
+  line-height: 12;
+  padding: 4px 8px;
+  height: 32px;
+  border-bottom: 2px solid black;
+}
+
+.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  content: none;
+}
+
+// Paginator CSS
+
+.ant-pagination-options {
+  margin-left: 8px;
+}
+
+.ant-pagination-item {
+  font-size: 12px;
+}
+
+// Table Operation Column icons css for 20 X 20 Icons - Start
+// example in "ViewAllRole" component table
+.table-operation-column-20x20-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-operation-column-20x20-icons > div {
+  height: 25px;
+  flex-basis: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-operation-column-20x20-icons img:hover {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+// Table Operation Column icons css - End
+
+
+// SSFS - Add this class to 1st col to get relevant padding
+.table-1st-col {
+  padding-left: 12px !important;
+}
+
+// SSFS - add .no-last-tr-border class to table if you want to remove boarder-bottom for last table row
+.no-last-tr-border .ant-table-tbody > tr:last-child > td {
+  border-bottom: none;
+}
+
+.ant-pagination-total-text {
+  position: absolute;
+  left: 0;
+}
+
+.ant-table-column-sorter {
+  color: black;
+}
+
+// SSFS - New
+.ant-table-column-sorter-up.active,
+.ant-table-column-sorter-down.active {
+  color: black;
+}
+
+// SSFS - New
+.ant-table-thead th.ant-table-column-has-sorters:hover {
+  background: @table-header-background-color;
+  opacity: 0.95;
+}
+
+// SSFS - New
+.ant-table-thead th.ant-table-column-sort {
+  background: @table-header-background-color;
+  opacity: 0.9;
+}
+
+
+.ant-table-filter-trigger {
+  color: black;
+}
+
+.info-table {
+  width: 100%;
+
+  font-size: 12px;
+  color: black;
+
+  tr {
+    height: 12px;
+  }
+
+  td {
+    border: 1px solid #7070701A;
+    padding: 8px;
+  }
+
+  td:first-child {
+    background-color:  #c8bfbf;
+  }
+  .w-30 {
+    width: 30%;
+  }
+}
+
