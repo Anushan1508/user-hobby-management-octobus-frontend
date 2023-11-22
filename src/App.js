@@ -5,7 +5,6 @@ import UserList from './components/UserList/UserList';
 import Login from './components/Login/Login';
 import HobbieList from './components/Hobbies/HobbieList';
 import Cookies from 'js-cookie'; // Import js-cookie
-
 const App = () => {
     const [authenticated, setAuthenticated] = useState(false);
 
