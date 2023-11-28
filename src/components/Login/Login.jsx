@@ -14,7 +14,7 @@ const Login = ({setAuthenticated}) => {
     const handleLogin = () => {
         loginForm.validateFields().then(async (value) => {
             const response = await login(loginForm.getFieldsValue());
-            console.log(response.status);
+            console.log(loginForm.getFieldsValue().email);
             if (response.status === "success") {
                 Cookies.set('authenticated', 'true', { expires: 10000 }); // Set expiration as needed
                 setAuthenticated(true);
@@ -64,10 +64,9 @@ const Login = ({setAuthenticated}) => {
                             min: 4,
                             message: 'Password must be at least 4 characters long.',
                         }
-
                     ]}
                 >
-                    <Input/>
+                    <Input type="password"/>
                 </Form.Item>
             </Form>
             <form>

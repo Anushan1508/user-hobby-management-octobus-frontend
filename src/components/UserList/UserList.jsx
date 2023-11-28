@@ -169,7 +169,6 @@ const UserList = () => {
                 rowKey={record => record.id}
             />
 
-
             <ViewUser
                 data={userVisibilty.data}
                 onClose={onCloseView}

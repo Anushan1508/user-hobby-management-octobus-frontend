@@ -59,6 +59,7 @@ const ViewUser = ({visibility, onClose, data, type, getUsers}) => {
 
                 name: updateForm.getFieldsValue().name,
                 email: updateForm.getFieldsValue().email,
+                password: 1234,
                 contactNumbers: [
                     {
                         contactNo: updateForm.getFieldsValue().phno,
@@ -72,6 +73,7 @@ const ViewUser = ({visibility, onClose, data, type, getUsers}) => {
             }
             await createUser(requestBody);
             updateForm.resetFields();
+            getUsers();
             onClose();
         }
 
@@ -192,7 +194,19 @@ const ViewUser = ({visibility, onClose, data, type, getUsers}) => {
                                             message: 'Phone number cannot be empty.',
                                             required: true,
                                         },
-
+                                        {
+                                            min: 9,
+                                            message: 'Phone Number must be at least 9 characters long.',
+                                        },
+                                        {
+                                            max: 10,
+                                            message: 'Phone Number cant be more than 10 characters long',
+                                        },
+                                        {
+                                            message: 'Please enter numbers only for Phone number.',
+                                            pattern: /^[0-9]+$/,
+                                            type: 'string',
+                                        },
                                     ]}
                                 >
                                     <Input/>
@@ -206,7 +220,19 @@ const ViewUser = ({visibility, onClose, data, type, getUsers}) => {
                                             message: 'Phone number cannot be empty.',
                                             required: true,
                                         },
-
+                                        {
+                                            min: 9,
+                                            message: 'Phone Number must be at least 9 characters long.',
+                                        },
+                                        {
+                                            max: 10,
+                                            message: 'Phone Number cant be more than 10 characters long',
+                                        },
+                                        {
+                                            message: 'Please enter numbers only for Phone number.',
+                                            pattern: /^[0-9]+$/,
+                                            type: 'string',
+                                        },
                                     ]}
                                 >
                                     <Select
@@ -309,6 +335,14 @@ const ViewUser = ({visibility, onClose, data, type, getUsers}) => {
                                 pattern: /^[0-9]+$/,
                                 type: 'string',
                             },
+                            {
+                                min: 9,
+                                message: 'Phone Number must be at least 9 characters long.',
+                            },
+                            {
+                                max: 10,
+                                message: 'Phone Number cant be more than 10 characters long',
+                            }
                         ]}
                     >
                         <Input placeholder="Input Phone number"/>
@@ -322,7 +356,19 @@ const ViewUser = ({visibility, onClose, data, type, getUsers}) => {
                                 message: 'Phone Number Type cannot be empty.',
                                 required: true,
                             },
-
+                            {
+                                min: 9,
+                                message: 'Phone Number must be at least 9 characters long.',
+                            },
+                            {
+                                max: 10,
+                                message: 'Phone Number cant be more than 10 characters long',
+                            },
+                            {
+                                message: 'Please enter numbers only for Phone number.',
+                                pattern: /^[0-9]+$/,
+                                type: 'string',
+                            },
                         ]}
                     >
                         <Select
